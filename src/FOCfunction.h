@@ -18,6 +18,8 @@ public:
     ~Motor();
     Motor(const Motor &) = delete;            // 禁止拷贝构造
     Motor &operator=(const Motor &) = delete; // 禁止拷贝赋值
+    Motor(Motor &&other) = delete;            // 禁止移动构造
+    Motor &operator=(Motor &&other) = delete; // 禁止移动赋值
 
     // 初始化
     void initPWM();
